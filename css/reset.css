@@ -28,12 +28,16 @@ html {
 }
 
 /* Reapply the pointer cursor for anchor tags */
-a, button {
+a,
+button {
     cursor: revert;
 }
 
 /* Remove list styles (bullets/numbers) */
-ol, ul, menu, summary {
+ol,
+ul,
+menu,
+summary {
     list-style: none;
 }
 
@@ -49,7 +53,8 @@ table {
 }
 
 /* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
-input, textarea {
+input,
+textarea {
     -webkit-user-select: auto;
 }
 
@@ -95,12 +100,6 @@ meter {
 /* apply back the draggable feature - exist only in Chromium and Safari */
 :where([draggable="true"]) {
     -webkit-user-drag: element;
-}
-
-/* Revert Modal native behavior */
-:where(dialog:modal) {
-    all: revert;
-    box-sizing: border-box;
 }
 
 /* Remove details summary webkit styles */
