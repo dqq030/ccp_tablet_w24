@@ -1,0 +1,196 @@
+body {
+    background: #c1e0c6;
+    color: #63391b;
+    margin: 5px;
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+body h1 {
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+h3 {
+    font-size: 1.1em;
+}
+
+h2,
+h3,
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin: auto;
+    padding: 10px;
+}
+
+body * {
+    padding: 2px;
+    margin: 3px;
+    margin-left: 5px;
+}
+
+div ul {
+    list-style: circle;
+    margin-left: 9px;
+}
+
+a {
+    text-decoration: underline;
+    color: #6a1956
+}
+
+p {
+    line-height: 1.2;
+}
+
+img,
+video {
+    border: 5px solid #ebf5dd;
+    padding: 10px;
+    margin: 20px;
+    border-top-right-radius: 30px;
+    max-height: 18em;
+    width: auto;
+}
+
+.Gallery img,
+video {
+    max-width: 100%;
+}
+
+li {
+    display: inline-block;
+    margin-left: 50px;
+    padding-left: 20px;
+}
+
+.page {
+    color: rgb(196, 43, 1);
+    font-weight: bold;
+}
+
+.skip {
+    position: absolute;
+    top: -40px;
+    left: 0;
+
+}
+
+.skip:focus {
+    top: 0;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.Gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#main>div {
+    padding: 20px;
+    margin: 10px;
+    border: 5px solid #e6f3d4;
+    border-radius: 30px;
+    background-color: #f1f8eb;
+}
+
+nav {
+    padding: 10px;
+    margin: 10px;
+    border: 5px solid #e6f3d4;
+    border-radius: 30px;
+    background-color: #f1f8eb;
+}
+
+nav * {
+    padding: 0;
+    margin: 2px;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+    margin: 5px;
+    padding: 0 15px;
+}
+
+#menu {
+    width: 5em;
+    position: absolute;
+    border-color: rgb(205, 239, 239);
+    background-color: #ebf7f8;display: none;
+}
+
+nav li {
+    text-align: center;
+}
+
+.button p{
+    display: inline;
+}
+
+.button{
+    position:relative;
+    left: -42px;
+    top: -10px;
+    z-index: 1
+}
+
+#menuButton {
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(36, 190, 217, 0.4);
+    width:15px;
+    height:15px;
+    z-index: 99;
+    position: relative;
+}
+
+#menuButton:checked~#menu {
+    display: block;
+}
+
+
+@media screen and (min-width: 600px) {
+    .Gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 100%;
+    }
+
+    #menuButton,
+    .button {
+        display: none;
+    }
+
+    nav ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        ;
+    }
+
+    #menu {
+        width: 100%;
+        position : relative;
+        display: block;   
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
